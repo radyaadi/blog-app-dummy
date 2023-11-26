@@ -57,5 +57,5 @@ If you have any feedback, please reach out to us at adiradya140@gmail.com
 
 ## Deployment
 
-The web can you access through the link [Blog Apss](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+The web can you access through the link [Blog Apss](https://radya-blog-app.netlify.app/)
 
