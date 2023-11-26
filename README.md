@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Hi Everyone ! I am [Radya Adi Anggara](https://radya-profiles.netlify.app/). This is my blog app I created using [Next.js](https://nextjs.org/). 
+
+Previously we apologized for the error on the [GoRest API](https://gorest.co.in/), so temporary web creation using dummy data locally.
 
 ## Getting Started
 
@@ -18,19 +21,41 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Documentation
 
-## Learn More
+Here are the features documentation that are available in this application
 
-To learn more about Next.js, take a look at the following resources:
+- Root Page
+![Root Page](https://drive.google.com/uc?id=1gIA__bmHhVEBKev59Y9JC7dGzPylF43f)
+This is the homepage of the website when it first opened
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Blog Page
+![Blog Page](https://drive.google.com/uc?id=12702zk2JkEAfShQiOGmLGv9_hLn1k7Dw)
+This is a blog page that displays blog posts from several users
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Blog Detail Page
+![Blog Detail Page](https://drive.google.com/uc?id=1poi4Zs5ujDA27EELOyAKkalpREAj4FqL)
+This is a page to display the details of a blog created by one user. Moreover this page also displays all the comments of the blog
 
-## Deploy on Vercel
+- User Page
+![User Page](https://drive.google.com/uc?id=1gIst-wzioBhI3gW99WcTWBhP8xTOAo_2)
+This is a page to display a list of existing users. On this page there are search, create accounts, and manage accounts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- User Register Page
+![User Register Page](https://drive.google.com/uc?id=1vxBgbze37fZ4lQKtGg6gBFrnWcAmB17-)
+This is a page to make user account (register)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- User Manage Page
+![User Manage Page](https://drive.google.com/uc?id=10HbTkOE4K1oxXeB73ujRMxdVgUmhdWvk)
+This is a page to do user management. There are two features: edit and delete
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at adiradya140@gmail.com
+
+
+## Deployment
+
+The web can you access through the link [Blog Apss](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+
