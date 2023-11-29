@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import useInput from '@/app/_hook/useInput';
+import useInput from "@/app/_hook/useInput";
 
 const RegisterUserPage = () => {
-  const [email, onEmailChange] = useInput('');
-  const [name, onNameChange] = useInput('');
-  const [gender, onGenderChange] = useInput('');
-  const [status, onStatusChange] = useInput('');
+  const [email, onEmailChange] = useInput("");
+  const [name, onNameChange] = useInput("");
+  const [gender, onGenderChange] = useInput("");
+  const [status, onStatusChange] = useInput("");
 
   const addUserHandler = async () => {
-    const apiUrl = 'https://gorest.co.in/public/v2/users';
+    const apiUrl = "https://gorest.co.in/public/v2/users";
     const accessToken =
-      '256550d9fcfb7a3c5abb0eb3b7b7dc8d7e64e2257dab1dcafdf2f306fbbbb953';
+      "256550d9fcfb7a3c5abb0eb3b7b7dc8d7e64e2257dab1dcafdf2f306fbbbb953";
 
     try {
       const response = await fetch(apiUrl, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          Accept: "application/json",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify({ name, gender, email, status }),
@@ -27,9 +27,9 @@ const RegisterUserPage = () => {
       const data = response.json();
       if (response.ok) {
         console.log(data);
-        alert('Register Successfully');
+        alert("Register Successfully");
       } else {
-        alert('Register Failed');
+        alert("Register Failed");
       }
     } catch (error) {
       alert(error);
@@ -91,6 +91,9 @@ const RegisterUserPage = () => {
                 name="gender"
                 className="block w-full rounded-md border-0 bg-black p-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:max-w-xs sm:text-sm sm:leading-6"
               >
+                <option disabled={true} value="male">
+                  Select Gender
+                </option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
               </select>
@@ -108,11 +111,11 @@ const RegisterUserPage = () => {
                 className="block w-full rounded-md border-0 bg-black p-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:max-w-xs sm:text-sm sm:leading-6"
                 required
               >
-                <option disabled={true} value="">
-                  Select your kelamin
+                <option disabled={true} value="active">
+                  Select Status
                 </option>
-                <option value="active">active</option>
-                <option value="inactive">inactive</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
               </select>
             </div>
           </div>
