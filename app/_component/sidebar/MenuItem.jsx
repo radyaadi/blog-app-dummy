@@ -1,8 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { TbBrandNextjs, TbHomeRibbon, TbUser } from "react-icons/tb";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const MenuItem = ({ name, path, icon }) => {
   const pathname = usePathname();
@@ -10,7 +9,7 @@ const MenuItem = ({ name, path, icon }) => {
     <Link
       href={path}
       className={`${
-        pathname.startsWith(path) ? "bg-gray-500 hover:bg-gray-500" : ""
+        pathname.startsWith(path) ? 'bg-gray-500 hover:bg-gray-500' : ''
       } inline-flex gap-x-3 px-8 py-3 duration-200 ease-in-out hover:bg-gray-500 sm:w-full`}
     >
       {icon}

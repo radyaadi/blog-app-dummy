@@ -1,5 +1,5 @@
-import Link from "next/link";
-import CustomButton from "./_component/button/CustomButton";
+import CustomButton from './_component/button/CustomButton';
+import Link from 'next/link';
 
 export default function Home() {
   return (

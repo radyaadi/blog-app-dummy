@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
 const CustomButton = ({
-  onName = "button",
-  onColor = "bg-gray-500 hover:bg-gray-400",
-  onType = "button",
+  onName = 'button',
+  onColor = 'bg-gray-500 hover:bg-gray-400',
+  onType = 'button',
 }) => {
   return (
     <button

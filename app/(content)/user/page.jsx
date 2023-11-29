@@ -1,51 +1,38 @@
-"use client";
+import CustomButton from '@/app/_component/button/CustomButton';
+import UserItem from './_component/UserItem';
+import Link from 'next/link';
 
-import Link from "next/link";
-import { useState } from "react";
-import { getAllUsers } from "@/app/_util/user-data";
-import UserItem from "./_component/UserItem";
-import SearchBar from "./_component/SearchBar";
-import CustomButton from "@/app/_component/button/CustomButton";
-
-const getData = () => {
-  const data = getAllUsers();
-  return data;
+const getUser = async () => {
+  const res = await fetch(
+    'https://gorest.co.in/public/v2/users?page=1&per_page=20',
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer 256550d9fcfb7a3c5abb0eb3b7b7dc8d7e64e2257dab1dcafdf2f306fbbbb953`,
+      },
+    }
+  );
+  const resJson = await res.json();
+  return { users: resJson };
 };
 
-const UserPage = () => {
-  const [keyword, setKeyword] = useState("");
-
-  const users = getData();
-
-  const onKeywordChangeHandler = (keyword) => {
-    setKeyword(keyword);
-  };
-
-  const filteredUsers = users.filter((user) => {
-    return user.name.toLowerCase().includes(keyword.toLowerCase());
-  });
+const UserPage = async () => {
+  const { users } = await getUser();
   return (
-    <>
-      <h1 className=" text-3xl font-bold">User List</h1>
-      <div className="my-10 flex w-full flex-col items-center gap-5 sm:inline-flex sm:flex-row">
-        <Link href="/user/register">
-          <CustomButton
-            onName="Create User"
-            onColor={"bg-blue-600 hover:bg-blue-500"}
-          />
-        </Link>
-        <SearchBar keyword={keyword} keywordChange={onKeywordChangeHandler} />
-      </div>
-      <div className="grid w-full grid-flow-row gap-y-3">
-        {!filteredUsers.length ? (
-          <p className="w-full text-center">No User Avaiable</p>
-        ) : (
-          filteredUsers.map((user) => {
-            return <UserItem key={user.id} {...user} />;
-          })
-        )}
-      </div>
-    </>
+    <div className="grid w-full grid-flow-row">
+      <h1 className="mb-5 text-3xl font-bold">User List</h1>
+      <Link href="/user/register">
+        <CustomButton
+          onName="Create User"
+          onColor={'bg-blue-600 hover:bg-blue-500'}
+        />
+      </Link>
+      {users.map((user) => {
+        return <UserItem key={user.id} {...user} />;
+      })}
+    </div>
   );
 };
 
